@@ -1,0 +1,410 @@
+/*--------------------------------- Initialising --------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  margin: 0;
+}
+/*--------------------------------- Home --------------------------------- */
+.logo-name {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 600;
+  font-family: "Shippori Antique", sans-serif;
+  color: rgba(81, 70, 68, 0.8);
+  height: 50vh;
+  padding: 0;
+  margin: 0;
+}
+.logo-subtext {
+  font-size: 3rem;
+  font-weight: 100;
+  text-align: center;
+  color: rgba(81, 70, 68, 0.9);
+  background-color: rgba(234, 224, 204, 0.2);
+  height: 50vh;
+  padding: 0;
+  margin: 0;
+}
+/*---------------- Utility Classes ------------------------*/
+.floral-white {
+  background-color: rgb(250, 249, 244);
+}
+.curve {
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
+}
+.curve::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 150%;
+  height: 100%;
+  background-color: rgb(250, 249, 244);
+  transform: translate(-14%, 74%);
+}
+.curve::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 150%;
+  height: 100%;
+  background-color: rgb(250, 249, 244);
+  transform: translate(-14%, 74%);
+  z-index: -1;
+}
+.section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+  margin: auto;
+  padding: 100px 20vw;
+}
+.section-tag {
+  font-size: 3rem;
+  font-variant: normal;
+  font-weight: 200;
+}
+#subtitle {
+  font-family: "Shippori Antique", sans-serif;
+  color: rgb(81, 70, 68);
+  font-size: 2rem;
+}
+/*--------------------------------- About --------------------------------- */
+.about-container {
+  width: 90%;
+  display: BLOCK;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  padding-bottom: 100px;  
+}
+.aboutTx-container {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgb(81, 70, 68);
+}
+.aboutTx-Text {
+  padding-bottom: 5%;
+}
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 10px;
+}
+.button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 900;
+  color: rgb(81, 70, 68);
+  filter: brightness(100%) grayscale(0.1);
+  border: none;
+  border-radius: 20px;
+}
+.button-links,
+.button-links:link,
+.buttons-links:visited {
+  text-decoration: none;
+  color: rgb(81, 70, 68);
+}
+.button:hover {
+  cursor: pointer;
+  background-color: rgba(81, 70, 68, 0.5);
+  color: white;
+}
+.sm-container {
+  display: flex;
+}
+.sm-container p {
+  font-family: "Shippori Antique", sans-serif;
+  padding: 10px 0;
+}
+.sm-icons {
+  max-width: 50px;
+  max-height: 50px;
+}
+.social-media {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.sm-links:link,
+.sm-links:visited {
+  text-decoration: none;
+  color: rgba(81, 70, 68, 0.9);
+}
+.sm-links:hover {
+  color: rgb(81, 70, 68);
+}
+/*--------------------------------- Skills --------------------------------- */
+.skills-section {
+  background-color: rgb(250, 249, 244);
+}
+.skills-container {
+  width: 100%;
+}
+.skillsTx-container {
+  /* text-align: left; */
+  /* font-size: 1.5rem; */
+  color: rgb(81, 70, 68);
+  font-family: sans-serif;
+  font-weight: 100;
+}
+.skills-list {
+  padding-bottom: 5px;
+}
+/* .skills.name {
+} */
+.progress-rank {
+  display: flex;
+  gap: 0.5rem;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+#dark {
+  background: rgb(105, 105, 105);
+}
+#light {
+  background: rgb(211, 211, 211);
+}
+.skills-container {
+  width: 100%;
+}
+.skills-logos {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+}
+.logo-img img {
+  width: 100px;
+  height: 100px;
+  opacity: .9;
+  filter: brightness(50%) grayscale(0);
+  transition: filter 100ms;
+}
+.logo-img img:hover {
+  filter: brightness(100%) grayscale(0);
+}
+/*--------------------------------- Portfolio --------------------------------- */
+.portfolio-container {
+  padding-bottom: 0px;
+  color: rgb(81, 70, 68);
+}
+.portfolio-scroll {
+  overflow-x: scroll;
+  padding: 1rem;
+  margin: 0 -1rem;
+  scroll-snap-type: x mandatory;
+}
+.web-pages {
+  display: flex;
+  gap: 2rem;
+  margin: 50px 0px;
+}
+.project-card {
+  max-width: 250px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  /* padding: 10px; */
+}
+.project-card img {
+  max-width: 250px;
+  opacity: 0.8;
+  filter: brightness(45%) grayscale(1);
+  transition: filter 1000ms;
+}
+.project-card img:hover {
+  filter: brightness(100%) grayscale(0);
+}
+.project-text {
+  padding: 10px;
+}
+.project-title {
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.project-description {
+  font-size: 1rem;
+  word-wrap: break-word;
+  font-weight: 200;
+}
+.project-language-container {
+  list-style-type: disc;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+.project-links-container {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.project-links {
+  text-decoration: underline;
+  color: rgb(81, 70, 68);
+}
+/*--------------------------------- Contact--------------------------------- */
+.contact-section {
+  width: 100%;
+  background-color: rgb(250, 249, 244);
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+  gap: 1rem;
+  width: 100%;
+  padding: 5px 0;
+  margin: auto;
+  color: rgb(81, 70, 68);
+}
+#contact-form {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgb(81, 70, 68);
+  padding: 5px 0px;
+  font-family: "Shippori Antique", sans-serif;
+}
+.labels::placeholder {
+  color: rgb(81, 70, 68);
+  font-family: "Shippori Antique", sans-serif;
+  font-size: 1rem;
+}
+.user-input {
+  padding: 1rem 1rem;
+  margin: 10px 0px;
+  width: 100%;
+  font-size: 1.2rem;
+  border: 1px rgb(81, 70, 68) solid;
+  background: transparent;
+  transition: border 500ms;
+}
+.user-input {
+  font-family: "Shippori Antique", sans-serif;
+}
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+}
+/*--------------------------------- Footer--------------------------------- */
+.footer-section {
+  width: 100%;
+  background-color: rgb(250, 249, 244);
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.copyright {
+  text-align: right;
+  color: rgb(81, 70, 68);
+  font-size: 0.9rem;
+  font-family: "Shippori Antique", sans-serif;
+}
+/*--------------------------------- MEDIA QUERIES --------------------------------- */
+/* =============================================================================== */
+/*--------------------------------- RESPONSIVE WEB DESIGN --------------------------------- */
+
+
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {...} */
+
+@media screen and (max-width: 690px) {
+  body {
+    display: block;
+  }
+  /*--------------------------------- Home --------------------------------- */
+  .logo-name {
+    font-size: 1.2rem;
+  }
+  .logo-subtext {
+    font-size: 1rem;
+  }
+  /*--------------------------------- About --------------------------------- */
+  .about-container {
+    display: block;
+  }
+  #subtitle {
+    font-size: 1.3rem;
+  }
+  .aboutTx-Text p {
+    font-size: 0.9rem;
+  }
+  .buttons-container {
+    display: block;
+  }
+  .button {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  .sm-container {
+    font-size: 0.7rem;
+    display: block;
+  }
+  .sm-icons {
+    max-width: 30px;
+    max-height: 30px;
+  }
+  /*--------------------------------- Skills --------------------------------- */
+  .skillset-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .logo-img img {
+    width: 50px;
+    height: 50px;
+  }
+  /*--------------------------------- Portfolio --------------------------------- */
+  .web-pages {
+    display: block;
+  }
+  /*--------------------------------- Contact --------------------------------- */
+.labels {
+  font-size: 0.9rem;
+}
+.labels::placeholder {
+  font-size: 0.9rem;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {...} */
+
+/* Orientation: Portrait / Landscape */
+/* @media only screen and (orientation: landscape) {
+  body {
+    background-color: lightblue;
+  }
+} */
